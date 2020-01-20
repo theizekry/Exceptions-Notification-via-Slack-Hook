@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Events\Exceptions\ExceptionEvent;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -34,6 +35,13 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+
+        /* START SECTION TO PUSH NOTIFICATION VIA SLACK API TO OUR CHANNEL WITH EXCEPTION DETAILS */
+
+        event(new ExceptionEvent($exception, request()->all()));
+
+        /* END SECTION TO PUSH NOTIFICATION VIA SLACK API TO OUR CHANNEL WITH EXCEPTION DETAILS */
+
         parent::report($exception);
     }
 
