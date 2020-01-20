@@ -1,5 +1,8 @@
 ### Send Push Notification to our Slack Channel whenever any Exception occurred.
 
+##### This Snippet that provider you to catch Exceptions occurred in your project and push notification to Slack Channel             contain that Exception details based in your Slack web hook URL.
+
+
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 # Challenge details and What is required? 
@@ -17,7 +20,7 @@
  
 ## Built With
 
-* [Laravel](https://laravel.com/) - As PHP web framework used. **
+* [Laravel](https://laravel.com/) - As PHP web framework used. 
 * **Events.**
 * **Listeners.**
 * **Slack Web Hook Integration.**
